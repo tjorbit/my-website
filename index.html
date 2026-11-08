@@ -1,11 +1,132 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <title>나의 첫 번째 웹사이트</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2026 경영실적 브리핑</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>나의 첫 번째 웹사이트!</h1>
-    <p>GitHub Pages로 만든 첫 홈페이지입니다.</p>
+  <div class="app">
+    <header class="topbar">
+      <div class="brand">NOVA <span>BUSINESS REVIEW</span></div>
+      <div class="progress"><div id="progressBar"></div></div>
+      <div id="pageNo">01 / 07</div>
+    </header>
+
+    <main id="slides">
+      <section class="slide active">
+        <div class="hero-grid">
+          <div>
+            <p class="eyebrow">2026 MANAGEMENT PERFORMANCE</p>
+            <h1>성장으로 증명한<br><strong>2026 경영실적</strong></h1>
+            <p class="lead">매출 · 수익성 · 고객 · 미래투자를 한눈에 보는 인터랙티브 경영 브리핑</p>
+            <button class="primary" onclick="goTo(1)">브리핑 시작 →</button>
+          </div>
+          <div class="hero-orb">
+            <div class="orb-ring"></div>
+            <div class="orb-center">+18.4%<small>매출 성장</small></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="slide">
+        <p class="eyebrow">01 / EXECUTIVE SUMMARY</p>
+        <h2>한눈에 보는 핵심 실적</h2>
+        <div class="kpi-grid">
+          <div class="kpi"><span>매출</span><b>₩1,284억</b><em>▲ 18.4%</em></div>
+          <div class="kpi"><span>영업이익</span><b>₩176억</b><em>▲ 24.1%</em></div>
+          <div class="kpi"><span>영업이익률</span><b>13.7%</b><em>▲ 0.6%p</em></div>
+          <div class="kpi"><span>신규 고객</span><b>8,420</b><em>▲ 21.7%</em></div>
+        </div>
+        <div class="insight">KEY MESSAGE <strong>매출 성장과 수익성 개선을 동시에 달성했습니다.</strong></div>
+      </section>
+
+      <section class="slide">
+        <p class="eyebrow">02 / REVENUE TREND</p>
+        <h2>매출 성장 추이</h2>
+        <div class="chart-card">
+          <div class="chart-head"><span>연간 매출</span><strong>단위: 억원</strong></div>
+          <div class="bars">
+            <div class="bar-item"><span>2022</span><div class="bar" style="height:45%"><b>820</b></div></div>
+            <div class="bar-item"><span>2023</span><div class="bar" style="height:55%"><b>990</b></div></div>
+            <div class="bar-item"><span>2024</span><div class="bar" style="height:67%"><b>1,085</b></div></div>
+            <div class="bar-item"><span>2025</span><div class="bar" style="height:76%"><b>1,084</b></div></div>
+            <div class="bar-item active-bar"><span>2026</span><div class="bar" style="height:90%"><b>1,284</b></div></div>
+          </div>
+        </div>
+        <p class="caption">* 본 페이지의 수치는 데모용 예시 데이터입니다.</p>
+      </section>
+
+      <section class="slide">
+        <p class="eyebrow">03 / PROFITABILITY</p>
+        <h2>수익성도 함께 개선</h2>
+        <div class="split">
+          <div class="donut-wrap">
+            <div class="donut"><div><strong>13.7%</strong><small>영업이익률</small></div></div>
+          </div>
+          <div class="profit-panel">
+            <div class="metric-row"><span>영업이익</span><strong>176억</strong><i>+24.1%</i></div>
+            <div class="metric-row"><span>원가율</span><strong>61.8%</strong><i>▼ 2.3%p</i></div>
+            <div class="metric-row"><span>판관비율</span><strong>24.5%</strong><i>▼ 0.9%p</i></div>
+            <div class="mini-note">매출 확대와 비용 효율화가 동시에 작동했습니다.</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="slide">
+        <p class="eyebrow">04 / BUSINESS MIX</p>
+        <h2>사업별 매출 포트폴리오</h2>
+        <div class="mix-grid">
+          <div class="mix-card"><div class="mix-icon">A</div><h3>솔루션</h3><strong>48%</strong><div class="track"><i style="width:48%"></i></div><small>617억</small></div>
+          <div class="mix-card"><div class="mix-icon">B</div><h3>서비스</h3><strong>32%</strong><div class="track"><i style="width:32%"></i></div><small>411억</small></div>
+          <div class="mix-card"><div class="mix-icon">C</div><h3>신사업</h3><strong>20%</strong><div class="track"><i style="width:20%"></i></div><small>256억</small></div>
+        </div>
+        <div class="insight">신사업 비중이 전년 대비 <strong>6%p 확대</strong>되며 성장 기반을 넓혔습니다.</div>
+      </section>
+
+      <section class="slide">
+        <p class="eyebrow">05 / NEXT STEP</p>
+        <h2>다음 성장을 위한 3가지 전략</h2>
+        <div class="strategy-grid">
+          <article><span>01</span><h3>고객 확대</h3><p>핵심 고객군을 세분화하고 디지털 영업 채널을 강화합니다.</p></article>
+          <article><span>02</span><h3>수익성 강화</h3><p>자동화와 데이터 기반 운영으로 비용 구조를 개선합니다.</p></article>
+          <article><span>03</span><h3>신사업 투자</h3><p>성장 가능성이 높은 신규 사업에 선택적으로 투자합니다.</p></article>
+        </div>
+      </section>
+
+      <section class="slide">
+        <p class="eyebrow">06 / CLOSING</p>
+        <div class="closing">
+          <div class="closing-number">18.4<span>%</span></div>
+          <h2>성장은 숫자로 시작하지만<br><strong>실행으로 완성됩니다.</strong></h2>
+          <p>2026 경영실적 브리핑을 마칩니다.</p>
+          <button class="secondary" onclick="goTo(1)">↻ 다시 보기</button>
+        </div>
+      </section>
+    </main>
+
+    <nav class="controls">
+      <button onclick="prev()">←</button>
+      <button onclick="openMenu()">☰ 목차</button>
+      <button onclick="next()">→</button>
+    </nav>
+
+    <div id="menu" class="menu hidden">
+      <div class="menu-box">
+        <button class="close" onclick="openMenu()">×</button>
+        <p class="eyebrow">CONTENTS</p>
+        <h2>브리핑 목차</h2>
+        <button onclick="goTo(0);openMenu()">표지</button>
+        <button onclick="goTo(1);openMenu()">핵심 실적</button>
+        <button onclick="goTo(2);openMenu()">매출 성장 추이</button>
+        <button onclick="goTo(3);openMenu()">수익성</button>
+        <button onclick="goTo(4);openMenu()">사업별 포트폴리오</button>
+        <button onclick="goTo(5);openMenu()">성장 전략</button>
+        <button onclick="goTo(6);openMenu()">마무리</button>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
 </body>
 </html>
