@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Statistics Calculator</title>
+    <link rel="stylesheet" href="largealivegrap.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <header>
+            <h1>STATISTICS</h1>
+            <p>통계 분석 계산기</p>
+        </header>
+
+        <section class="input-section">
+            <h2>데이터 입력</h2>
+
+            <textarea id="dataInput"
+                placeholder="숫자를 입력하세요.&#10;예: 10, 20, 20, 30, 40"></textarea>
+
+            <button onclick="calculate()">
+                분석하기
+            </button>
+        </section>
+
+        <section class="result-section">
+            <h2>분석 결과</h2>
+
+            <div class="result-grid">
+
+                <div class="result-card">
+                    <span>평균</span>
+                    <strong id="mean">-</strong>
+                </div>
+
+                <div class="result-card">
+                    <span>중앙값</span>
+                    <strong id="median">-</strong>
+                </div>
+
+                <div class="result-card">
+                    <span>최빈값</span>
+                    <strong id="mode">-</strong>
+                </div>
+
+                <div class="result-card">
+                    <span>표준편차</span>
+                    <strong id="std">-</strong>
+                </div>
+
+            </div>
+
+            <section class="chart-section">
+                <h2>데이터 시각화</h2>
+
+                <div class="chart-card">
+                    <h3>도수분포 그래프</h3>
+                    <canvas id="histogramChart"></canvas>
+                </div>
+
+                <div class="chart-card">
+                    <h3>도수분포다각형</h3>
+                    <canvas id="polygonChart"></canvas>
+                </div>
+
+                <div class="chart-card">
+                    <h3>상자수염그림</h3>
+                    <canvas id="boxplotChart"></canvas>
+                </div>
+            </div>
+        </section>
+        
+    </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script src="dapupgapsanpodo.js"></script>
+
+</body>
+</html>
